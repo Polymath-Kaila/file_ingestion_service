@@ -58,6 +58,12 @@ def stream_with_signature(
         (file_type, chunk)
     """
     header = stream.read(header_size)
+    mv = memoryview(header)
+
+    if mv.startswith(b"\x89PNG"):
+        filetype = "png"
+    else:
+        return
 
     file_type = detect_file_type(header)
 
@@ -68,3 +74,5 @@ def stream_with_signature(
     # Yield the rest of the stream
     for chunk in stream_chunk(stream, chunk_size):
         yield file_type, chunk
+
+
