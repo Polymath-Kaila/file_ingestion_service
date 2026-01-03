@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/file_ingestion_service.egg-info/PKG-INFO
+src/file_ingestion_service.egg-info/SOURCES.txt
+src/file_ingestion_service.egg-info/dependency_links.txt
+src/file_ingestion_service.egg-info/top_level.txt
+src/ingestion/__init__.py
+src/ingestion/ingest.py
+src/ingestion/metadata.py
+src/ingestion/signatures.py
+src/ingestion/stream_reader.py
+src/ingestion/text_handling.py
